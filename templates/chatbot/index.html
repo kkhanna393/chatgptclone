@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>ChatGPT Clone</h1>
+        
+        <form method="post" class="chat-form">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" name="prompt" class="prompt-input" placeholder="Enter your prompt here..." value="{{ prompt }}" required>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+        
+        {% if response %}
+        <div class="response-container">
+            <div class="response">{{ response|safe }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
