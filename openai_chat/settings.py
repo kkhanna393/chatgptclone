@@ -148,5 +148,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # OpenAI API Settings
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = "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"
 OPENAI_MODEL = 'gpt-3.5-turbo'  # You can change this to another model if needed
