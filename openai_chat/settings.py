@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     getenv("APP_HOST"),
     "localhost",
     "127.0.0.1"
+    "142.93.213.126",
 ]
 
 
